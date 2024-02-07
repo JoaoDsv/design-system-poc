@@ -13,7 +13,9 @@
     "prepare": "panda codegen"
   },
   "dependencies": {
+    "@radix-ui/react-checkbox": "^1.0.4",
     "@shadow-panda/style-context": "^0.7.1",
+    "lucide-react": "^0.323.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
