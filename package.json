@@ -13,11 +13,13 @@
     "prepare": "panda codegen"
   },
   "dependencies": {
+    "@shadow-panda/style-context": "^0.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@pandacss/dev": "^0.30.2",
+    "@shadow-panda/preset": "^0.7.1",
     "@storybook/addon-essentials": "^7.6.13",
     "@storybook/addon-interactions": "^7.6.13",
     "@storybook/addon-links": "^7.6.13",
