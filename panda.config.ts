@@ -17,7 +17,24 @@ export default defineConfig({
 
   // Useful for theme customization
   theme: {
-    extend: {},
+    extend: {
+      // Override `semanticTokens`
+      semanticTokens: {
+        // Example: Set primary color to another value
+        colors: {
+          primary: {
+            DEFAULT: {
+              value: {
+                // Light mode
+                base: "#7667E8",
+                // Dark mode
+                _dark: "{colors.grayscale.50}",
+              },
+            },
+          },
+        },
+      },
+    },
   },
 
   // The output directory for your css system
