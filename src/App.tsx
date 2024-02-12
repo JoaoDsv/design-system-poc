@@ -15,6 +15,16 @@ import {
   DropdownMenuTrigger,
 } from "./components/DropdownMenu";
 
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./components/Table";
+
 function App() {
   return (
     <>
@@ -45,6 +55,25 @@ function App() {
           <Checkbox id="terms" />
           <label htmlFor="terms">Accept terms and conditions</label>
         </Flex>
+        <Table>
+          <TableCaption>A list of your recent invoices.</TableCaption>
+          <TableHeader>
+            <TableRow>
+              <TableHead w="100px">Invoice</TableHead>
+              <TableHead>Status</TableHead>
+              <TableHead>Method</TableHead>
+              <TableHead textAlign="right">Amount</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell fontWeight="medium">INV001</TableCell>
+              <TableCell>Paid</TableCell>
+              <TableCell>Credit Card</TableCell>
+              <TableCell textAlign="right">$250.00</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
       </div>
       <button className={css({ color: "cyan" })}>Here</button>
     </>
