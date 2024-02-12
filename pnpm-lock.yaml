@@ -11,7 +11,10 @@ dependencies:
   "@radix-ui/react-dropdown-menu":
     specifier: ^2.0.6
     version: 2.0.6(@types/react-dom@18.2.18)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
-  "@shadow-panda/style-context":
+  '@radix-ui/react-dropdown-menu':
+    specifier: ^2.0.6
+    version: 2.0.6(@types/react-dom@18.2.18)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
+  '@shadow-panda/style-context':
     specifier: ^0.7.1
     version: 0.7.1(@types/react-dom@18.2.18)(@types/react@18.2.55)(react-dom@18.2.0)(react@18.2.0)
   lucide-react:
