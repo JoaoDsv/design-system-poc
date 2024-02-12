@@ -1,4 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
+import { checkboxRecipe } from "./src/components/checkbox.recipe";
 
 export default defineConfig({
   presets: ["@shadow-panda/preset"],
@@ -33,6 +34,10 @@ export default defineConfig({
             },
           },
         },
+      },
+
+      slotRecipes: {
+        checkbox: checkboxRecipe,
       },
     },
   },
