@@ -3,10 +3,14 @@ import { Button } from "./components/Button";
 import { css } from "styled-system/css";
 import { Flex } from "styled-system/jsx";
 
+import { Input } from "./components/Input";
+
 function App() {
   return (
     <>
       <div>
+        <Input />
+
         <Flex alignItems="center" gap="2">
           <Button variant="default" size="default">
             Button
