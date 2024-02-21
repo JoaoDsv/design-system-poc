@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Homepage } from "./Homepage";
 import { Button } from "./components/Button";
 import { usePost } from "./hooks/usePost";
+import BasicForm from "./forms/basic-form";
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
@@ -28,6 +29,8 @@ function App() {
           <pre>{JSON.stringify(post.data, null, 2)}</pre>
         )}
       </div>
+
+      <BasicForm />
     </>
   );
 }
