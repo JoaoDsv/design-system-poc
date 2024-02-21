@@ -4,6 +4,9 @@ import { Button } from "./components/Button";
 import { usePost } from "./hooks/usePost";
 import BasicForm from "./forms/BasicForm";
 
+import MultiStepForm from "./forms/MultiStepForm";
+import { Box } from "../styled-system/jsx";
+
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
   const [postID, setPostID] = useState(1);
@@ -31,6 +34,9 @@ function App() {
       </div>
 
       <BasicForm />
+      <Box maxWidth="600px" margin="100px auto 100px auto">
+        <MultiStepForm />
+      </Box>
     </>
   );
 }
