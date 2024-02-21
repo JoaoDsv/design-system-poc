@@ -1,5 +1,6 @@
 import { defineConfig } from "@pandacss/dev";
 import { checkboxRecipe } from "./src/components/checkbox.recipe";
+import { inputRecipe } from "./src/components/input.recipe";
 
 export default defineConfig({
   presets: ["@shadow-panda/preset"],
@@ -15,6 +16,12 @@ export default defineConfig({
 
   // Files to exclude
   exclude: [],
+
+  conditions: {
+    extend: {
+      invalid: "&:is(:invalid, [data-invalid], [aria-invalid])",
+    },
+  },
 
   // Useful for theme customization
   theme: {
@@ -36,6 +43,9 @@ export default defineConfig({
         },
       },
 
+      recipes: {
+        input: inputRecipe,
+      },
       slotRecipes: {
         checkbox: checkboxRecipe,
       },

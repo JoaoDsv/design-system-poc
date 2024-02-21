@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Homepage } from "./Homepage";
 import { Button } from "./components/Button";
 import { usePost } from "./hooks/usePost";
-import BasicForm from "./forms/basic-form";
+import BasicForm from "./forms/BasicForm";
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0);
