@@ -1,29 +1,29 @@
-"use client";
+'use client';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import { z } from "zod";
-import { FormSchema } from "../validations/multi-step-form-schema";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Input } from "../components/Input";
-import { Button } from "../components/Button";
-import { Box, styled } from "../../styled-system/jsx";
+import { z } from 'zod';
+import { FormSchema } from '../validations/multi-step-form-schema';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { Input } from '../components/Input/Input';
+import { Button } from '../components/Button/Button';
+import { Box, styled } from '../../styled-system/jsx';
 
 type FormSchemaType = z.infer<typeof FormSchema>;
 
 const steps = [
   {
-    id: "Step 1",
-    name: "Personal Information",
-    fields: ["firstName", "lastName", "email"],
+    id: 'Step 1',
+    name: 'Personal Information',
+    fields: ['firstName', 'lastName', 'email'],
   },
   {
-    id: "Step 2",
-    name: "Address",
-    fields: ["country", "state", "city", "street", "zip"],
+    id: 'Step 2',
+    name: 'Address',
+    fields: ['country', 'state', 'city', 'street', 'zip'],
   },
-  { id: "Step 3", name: "Complete" },
+  { id: 'Step 3', name: 'Complete' },
 ];
 
 export default function MultiStepForm() {
@@ -123,10 +123,10 @@ export default function MultiStepForm() {
                 </label>
                 <div className="mt-2">
                   <Input
-                    aria-invalid={errors.zip?.message ? "true" : undefined}
+                    aria-invalid={errors.zip?.message ? 'true' : undefined}
                     type="text"
                     id="firstName"
-                    {...register("firstName")}
+                    {...register('firstName')}
                     autoComplete="given-name"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                   />
@@ -147,10 +147,10 @@ export default function MultiStepForm() {
                 </label>
                 <div className="mt-2">
                   <Input
-                    aria-invalid={errors.zip?.message ? "true" : undefined}
+                    aria-invalid={errors.zip?.message ? 'true' : undefined}
                     type="text"
                     id="lastName"
-                    {...register("lastName")}
+                    {...register('lastName')}
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                   />
@@ -171,10 +171,10 @@ export default function MultiStepForm() {
                 </label>
                 <div className="mt-2">
                   <Input
-                    aria-invalid={errors.zip?.message ? "true" : undefined}
+                    aria-invalid={errors.zip?.message ? 'true' : undefined}
                     id="email"
                     type="email"
-                    {...register("email")}
+                    {...register('email')}
                     autoComplete="email"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                   />
@@ -210,7 +210,7 @@ export default function MultiStepForm() {
                 <div className="mt-2">
                   <select
                     id="country"
-                    {...register("country")}
+                    {...register('country')}
                     autoComplete="country-name"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:max-w-xs sm:text-sm sm:leading-6"
                   >
@@ -235,10 +235,10 @@ export default function MultiStepForm() {
                 </label>
                 <div className="mt-2">
                   <Input
-                    aria-invalid={errors.street?.message ? "true" : undefined}
+                    aria-invalid={errors.street?.message ? 'true' : undefined}
                     type="text"
                     id="street"
-                    {...register("street")}
+                    {...register('street')}
                     autoComplete="street-address"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                   />
@@ -259,10 +259,10 @@ export default function MultiStepForm() {
                 </label>
                 <div className="mt-2">
                   <Input
-                    aria-invalid={errors.city?.message ? "true" : undefined}
+                    aria-invalid={errors.city?.message ? 'true' : undefined}
                     type="text"
                     id="city"
-                    {...register("city")}
+                    {...register('city')}
                     autoComplete="address-level2"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                   />
@@ -283,10 +283,10 @@ export default function MultiStepForm() {
                 </label>
                 <div className="mt-2">
                   <Input
-                    aria-invalid={errors.state?.message ? "true" : undefined}
+                    aria-invalid={errors.state?.message ? 'true' : undefined}
                     type="text"
                     id="state"
-                    {...register("state")}
+                    {...register('state')}
                     autoComplete="address-level1"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                   />
@@ -307,10 +307,10 @@ export default function MultiStepForm() {
                 </label>
                 <div className="mt-2">
                   <Input
-                    aria-invalid={errors.zip?.message ? "true" : undefined}
+                    aria-invalid={errors.zip?.message ? 'true' : undefined}
                     type="text"
                     id="zip"
-                    {...register("zip")}
+                    {...register('zip')}
                     autoComplete="postal-code"
                     className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-sky-600 sm:text-sm sm:leading-6"
                   />

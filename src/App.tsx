@@ -1,44 +1,14 @@
-import { useState } from "react";
-import { Homepage } from "./Homepage";
-import { Button } from "./components/Button";
-import { usePost } from "./hooks/usePost";
-import BasicForm from "./forms/BasicForm";
-
-import MultiStepForm from "./forms/MultiStepForm";
-import { Box } from "../styled-system/jsx";
+import { Homepage } from './pages/Homepage';
+import { PageOne } from './pages/PageOne';
 
 function App() {
-  const [pageNumber, setPageNumber] = useState(0);
-  const [postID, setPostID] = useState(1);
-  const post = usePost(postID);
+  if (location.pathname === '/')
+    return <Homepage returnHome={() => (location.href = '/1')} />;
 
-  if (pageNumber === 0) return <Homepage returnHome={() => setPageNumber(1)} />;
+  if (location.pathname === '/1')
+    return <PageOne returnHome={() => (location.href = '/')} />;
 
-  return (
-    <>
-      <button onClick={() => setPageNumber(0)}>GOTO Homepage</button>
-      <div>
-        <h1>Page 1!</h1>
-        <Button onClick={() => setPostID(1)}>Fetch first post</Button>
-        <Button onClick={() => setPostID(2)}>Fetch second post</Button>
-        <Button onClick={() => setPostID(3)}>Fetch third post</Button>
-        <Button onClick={() => setPostID(4)}>Fetch fourth post</Button>
-
-        {post.status === "pending" ? (
-          <div>loading</div>
-        ) : post.status === "error" ? (
-          <div>error</div>
-        ) : (
-          <pre>{JSON.stringify(post.data, null, 2)}</pre>
-        )}
-      </div>
-
-      <BasicForm />
-      <Box maxWidth="600px" margin="100px auto 100px auto">
-        <MultiStepForm />
-      </Box>
-    </>
-  );
+  return '404';
 }
 
 export default App;

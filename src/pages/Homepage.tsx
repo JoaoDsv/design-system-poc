@@ -1,10 +1,10 @@
-import { Checkbox } from "./components/Checkbox";
-import { Button } from "./components/Button";
-import { css } from "../styled-system/css";
-import { button } from "../styled-system/recipes";
-import { Flex } from "../styled-system/jsx";
+import { Checkbox } from '../components/Checkbox/Checkbox';
+import { Button } from '../components/Button/Button';
+import { css } from '../../styled-system/css';
+import { button } from '../../styled-system/recipes';
+import { Flex } from '../../styled-system/jsx';
 
-import { Input } from "./components/Input";
+import { Input } from '../components/Input/Input';
 
 import {
   DropdownMenu,
@@ -13,7 +13,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "./components/DropdownMenu";
+} from '../components/Dropdown/DropdownMenu';
 
 import {
   Table,
@@ -23,7 +23,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./components/Table";
+} from '../components/Table/Table';
 type Props = {
   returnHome: () => void;
 };
@@ -37,7 +37,7 @@ export const Homepage = ({ returnHome }: Props) => {
 
         <Flex alignItems="center" gap="2">
           <DropdownMenu>
-            <DropdownMenuTrigger className={button({ variant: "default" })}>
+            <DropdownMenuTrigger className={button({ variant: 'default' })}>
               Open
             </DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -79,7 +79,7 @@ export const Homepage = ({ returnHome }: Props) => {
           </TableBody>
         </Table>
       </div>
-      <button className={css({ color: "cyan" })}>Here</button>
+      <button className={css({ color: 'cyan' })}>Here</button>
     </>
   );
 };

@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react';
 
-import { Button } from "./Button";
-import { Flex } from "../../styled-system/jsx";
+import { Button } from './Button';
+import { Flex } from '../../../styled-system/jsx';
 
 const meta = {
-  title: "Example/Button",
+  title: 'Example/Button',
   component: Button,
   decorators: [
     (Child) => {
@@ -16,7 +16,7 @@ const meta = {
     },
   ],
   parameters: {
-    layout: "centered",
+    layout: 'centered',
   },
 } satisfies Meta<typeof Button>;
 

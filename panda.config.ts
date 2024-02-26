@@ -1,25 +1,25 @@
-import { defineConfig } from "@pandacss/dev";
-import { checkboxRecipe } from "./src/components/checkbox.recipe";
-import { inputRecipe } from "./src/components/input.recipe";
+import { defineConfig } from '@pandacss/dev';
+import { checkboxRecipe } from './src/components/Checkbox/checkbox.recipe';
+import { inputRecipe } from './src/components/Input/input.recipe';
 
 export default defineConfig({
-  presets: ["@shadow-panda/preset"],
+  presets: ['@shadow-panda/preset'],
 
   // Whether to use css reset
   preflight: true,
 
   // Use React
-  jsxFramework: "react",
+  jsxFramework: 'react',
 
   // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
+  include: ['./src/**/*.{js,jsx,ts,tsx}', './pages/**/*.{js,jsx,ts,tsx}'],
 
   // Files to exclude
   exclude: [],
 
   conditions: {
     extend: {
-      invalid: "&:is(:invalid, [data-invalid], [aria-invalid])",
+      invalid: '&:is(:invalid, [data-invalid], [aria-invalid])',
     },
   },
 
@@ -34,9 +34,9 @@ export default defineConfig({
             DEFAULT: {
               value: {
                 // Light mode
-                base: "#7667E8",
+                base: '#7667E8',
                 // Dark mode
-                _dark: "{colors.grayscale.50}",
+                _dark: '{colors.grayscale.50}',
               },
             },
           },
@@ -53,5 +53,5 @@ export default defineConfig({
   },
 
   // The output directory for your css system
-  outdir: "styled-system",
+  outdir: 'styled-system',
 });

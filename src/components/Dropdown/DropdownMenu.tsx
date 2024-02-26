@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import { Check, ChevronRight, Circle } from "lucide-react";
-import { createStyleContext } from "@shadow-panda/style-context";
-import { styled } from "../../styled-system/jsx";
-import { css, cx } from "../../styled-system/css";
-import { dropdownMenu, icon } from "../../styled-system/recipes";
+import * as React from 'react';
+import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+import { Check, ChevronRight, Circle } from 'lucide-react';
+import { createStyleContext } from '@shadow-panda/style-context';
+import { styled } from '../../../styled-system/jsx';
+import { css, cx } from '../../../styled-system/css';
+import { dropdownMenu, icon } from '../../../styled-system/recipes';
 
 const { withProvider, withContext } = createStyleContext(dropdownMenu);
 
@@ -18,11 +18,11 @@ const SubTrigger = React.forwardRef<
 >(({ className, insetLeft, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger
     ref={ref}
-    className={cx(insetLeft && css({ pl: "8" }), className)}
+    className={cx(insetLeft && css({ pl: '8' }), className)}
     {...props}
   >
     {children}
-    <ChevronRight className={icon({ left: "auto" })} />
+    <ChevronRight className={icon({ left: 'auto' })} />
   </DropdownMenuPrimitive.SubTrigger>
 ));
 SubTrigger.displayName = DropdownMenuPrimitive.SubTrigger.displayName;
@@ -49,7 +49,7 @@ const Item = React.forwardRef<
 >(({ className, insetLeft, ...props }, ref) => (
   <DropdownMenuPrimitive.Item
     ref={ref}
-    className={cx(insetLeft && css({ pl: "8" }), className)}
+    className={cx(insetLeft && css({ pl: '8' }), className)}
     {...props}
   />
 ));
@@ -57,7 +57,7 @@ Item.displayName = DropdownMenuPrimitive.Item.displayName;
 
 const ItemIndicator = withContext(
   styled(DropdownMenuPrimitive.ItemIndicator),
-  "itemIndicator"
+  'itemIndicator'
 );
 
 const CheckboxItem = React.forwardRef<
@@ -79,7 +79,7 @@ const RadioItem = React.forwardRef<
 >(({ children, ...props }, ref) => (
   <DropdownMenuPrimitive.RadioItem ref={ref} {...props}>
     <ItemIndicator>
-      <Circle className={icon({ size: "xs", fillCurrent: true })} />
+      <Circle className={icon({ size: 'xs', fillCurrent: true })} />
     </ItemIndicator>
     {children}
   </DropdownMenuPrimitive.RadioItem>
@@ -94,7 +94,7 @@ const Label = React.forwardRef<
 >(({ className, insetLeft, ...props }, ref) => (
   <DropdownMenuPrimitive.Label
     ref={ref}
-    className={cx(insetLeft && css({ pl: "8" }), className)}
+    className={cx(insetLeft && css({ pl: '8' }), className)}
     {...props}
   />
 ));
@@ -102,49 +102,49 @@ Label.displayName = DropdownMenuPrimitive.Label.displayName;
 
 export const DropdownMenu = withProvider(
   styled(DropdownMenuPrimitive.Root),
-  "root"
+  'root'
 );
 export const DropdownMenuTrigger = withContext(
   styled(DropdownMenuPrimitive.Trigger),
-  "trigger"
+  'trigger'
 );
 export const DropdownMenuGroup = withContext(
   styled(DropdownMenuPrimitive.Group),
-  "group"
+  'group'
 );
 export const DropdownMenuPortal = withContext(
   styled(DropdownMenuPrimitive.Portal),
-  "portal"
+  'portal'
 );
 export const DropdownMenuSub = withContext(
   styled(DropdownMenuPrimitive.Sub),
-  "sub"
+  'sub'
 );
 export const DropdownMenuRadioGroup = withContext(
   styled(DropdownMenuPrimitive.RadioGroup),
-  "radioGroup"
+  'radioGroup'
 );
 export const DropdownMenuSubTrigger = withContext(
   styled(SubTrigger),
-  "subTrigger"
+  'subTrigger'
 );
 export const DropdownMenuSubContent = withContext(
   styled(DropdownMenuPrimitive.SubContent),
-  "subContent"
+  'subContent'
 );
-export const DropdownMenuContent = withContext(styled(Content), "content");
-export const DropdownMenuItem = withContext(styled(Item), "item");
+export const DropdownMenuContent = withContext(styled(Content), 'content');
+export const DropdownMenuItem = withContext(styled(Item), 'item');
 export const DropdownMenuCheckboxItem = withContext(
   styled(CheckboxItem),
-  "checkboxItem"
+  'checkboxItem'
 );
 export const DropdownMenuRadioItem = withContext(
   styled(RadioItem),
-  "radioItem"
+  'radioItem'
 );
-export const DropdownMenuLabel = withContext(styled(Label), "label");
+export const DropdownMenuLabel = withContext(styled(Label), 'label');
 export const DropdownMenuSeparator = withContext(
   styled(DropdownMenuPrimitive.Separator),
-  "separator"
+  'separator'
 );
-export const DropdownMenuShortcut = withContext(styled("span"), "shortcut");
+export const DropdownMenuShortcut = withContext(styled('span'), 'shortcut');

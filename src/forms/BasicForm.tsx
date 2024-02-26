@@ -1,10 +1,10 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-import { Input } from "../components/Input";
-import { Button } from "../components/Button";
-import { styled } from "../../styled-system/jsx";
-import { UserValidations, type User } from "../validations/user";
+import { useForm, SubmitHandler } from 'react-hook-form';
+import { Input } from '../components/Input/Input';
+import { Button } from '../components/Button/Button';
+import { styled } from '../../styled-system/jsx';
+import { UserValidations, type User } from '../validations/user';
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import { zodResolver } from '@hookform/resolvers/zod';
 
 export default function BasicForm() {
   const {
@@ -13,7 +13,7 @@ export default function BasicForm() {
     formState: { errors },
   } = useForm<User>({
     resolver: zodResolver(UserValidations),
-    mode: "onBlur",
+    mode: 'onBlur',
   });
 
   const onSubmit: SubmitHandler<User> = (data) => console.log(data);
@@ -29,13 +29,13 @@ export default function BasicForm() {
       onSubmit={handleSubmit(onSubmit)}
     >
       {/* register your input into the hook by invoking the "register" function */}
-      <Input defaultValue="test" {...register("username")} />
+      <Input defaultValue="test" {...register('username')} />
 
       {/* include validation with required or other standard HTML validation rules */}
       <Input
         required
-        aria-invalid={errors.email ? "true" : undefined}
-        {...register("email", { required: true })}
+        aria-invalid={errors.email ? 'true' : undefined}
+        {...register('email', { required: true })}
       />
       {/* errors will return when field validation fails  */}
       {errors.email && <span>{errors.email.message}</span>}
